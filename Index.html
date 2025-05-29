@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C-A CELL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>C-A CELL</h1>
+    <div id="cart">🛒 <span id="cart-count">0</span></div>
+  </header>
+
+  <main>
+    <div class="products">
+      <div class="product">
+        <h2>Smartphone X</h2>
+        <p>R$ 1.999,00</p>
+        <button onclick="addToCart('Smartphone X', 1999)">Adicionar</button>
+      </div>
+      <div class="product">
+        <h2>Fone Bluetooth</h2>
+        <p>R$ 199,00</p>
+        <button onclick="addToCart('Fone Bluetooth', 199)">Adicionar</button>
+      </div>
+    </div>
+
+    <div id="cart-items">
+      <h3>Carrinho</h3>
+      <ul id="cart-list"></ul>
+      <p>Total: R$ <span id="cart-total">0</span>,00</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
