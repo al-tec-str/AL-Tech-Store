@@ -1,38 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>C-A CELL</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>C-A CELL</h1>
-    <div id="cart">🛒 <span id="cart-count">0</span></div>
-  </header>
-
-  <main>
-    <div class="products">
-      <div class="product">
-        <h2>Iphone 14 PRO MAX X</h2>
-        <p>R$ 5.500,00</p>
-        <button onclick="addToCart('Smartphone X', 1999)">Adicionar</button>
-      </div>
-      <div class="product">
-        <h2>Fone sem fio</h2>
-        <p>R$ 100,00</p>
-        <button onclick="addToCart('Fone Bluetooth', 199)">Adicionar</button>
-      </div>
+<section id="produtos" class="container">
+  <h2>Produtos em Destaque</h2>
+  <div class="grid-produtos">
+    <div class="produto">
+      <img src="https://images.unsplash.com/photo-1585386959984-a41552262b3a?auto=format&fit=crop&w=600&q=80" alt="Carregador Turbo">
+      <h3>Carregador Turbo</h3>
+      <p>Compatível com Android e iPhone. Carga 3x mais rápida.</p>
+      <p class="preco">R$ 49,90</p>
     </div>
 
-    <div id="cart-items">
-      <h3>Carrinho</h3>
-      <ul id="cart-list"></ul>
-      <p>Total: R$ <span id="cart-total">0</span>,00</p>
+    <div class="produto">
+      <img src="https://images.unsplash.com/photo-1583224522564-2ec7d8b3df4b?auto=format&fit=crop&w=600&q=80" alt="Fone Bluetooth">
+      <h3>Fone Bluetooth</h3>
+      <p>Conexão rápida, bateria de até 10h. Ideal para esportes.</p>
+      <p class="preco">R$ 89,90</p>
     </div>
-  </main>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <div class="produto">
+      <img src="https://images.unsplash.com/photo-1591375279190-1d4f4cd7fefc?auto=format&fit=crop&w=600&q=80" alt="Capinha Silicone">
+      <h3>Capinha de Silicone</h3>
+      <p>Proteção anti-impacto. Várias cores disponíveis.</p>
+      <p class="preco">R$ 29,90</p>
+    </div>
+
+    <div class="produto">
+      <img src="https://images.unsplash.com/photo-1588776814546-41aa0d4199ed?auto=format&fit=crop&w=600&q=80" alt="Suporte Veicular">
+      <h3>Suporte Veicular</h3>
+      <p>Fixação forte e ajustável. Perfeito para GPS e chamadas.</p>
+      <p class="preco">R$ 34,90</p>
+    </div>
+  </div>
+</section>
