@@ -2,21 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>C.A. CELL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C.A. CELL - Produtos</title>
   <style>
     body {
+      background-color: #fff;
       font-family: Arial, sans-serif;
-      background: #f0f0f0;
       margin: 0;
       padding: 0;
-    }
-
-    h1 {
-      background-color: #111;
-      color: white;
-      padding: 20px 0;
-      margin: 0;
-      text-align: center;
     }
 
     .produtos {
@@ -24,243 +17,204 @@
       flex-wrap: wrap;
       justify-content: center;
       padding: 20px;
-      gap: 20px;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .produto {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 250px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: calc(50% - 30px);
+      box-sizing: border-box;
+      padding: 15px;
       text-align: center;
-      transition: transform 0.2s;
+      transition: box-shadow 0.3s ease;
     }
 
     .produto:hover {
-      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .produto img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px 10px 0 0;
-      cursor: zoom-in;
+      height: auto;
+      max-height: 280px;
+      object-fit: contain;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      cursor: pointer;
     }
 
     .produto h3 {
-      font-size: 15px;
-      margin: 10px;
+      font-size: 16px;
+      color: #333;
+      margin: 10px 0;
     }
 
     .produto p {
       font-size: 18px;
+      color: #0a7b20;
       font-weight: bold;
-      color: #27ae60;
-      margin-bottom: 10px;
     }
 
     .botao {
       display: inline-block;
+      margin-top: 10px;
       padding: 10px 15px;
-      background-color: #27ae60;
-      color: white;
+      background-color: #0a7b20;
+      color: #fff;
       text-decoration: none;
       border-radius: 5px;
-      margin-bottom: 10px;
+      transition: background-color 0.2s;
     }
 
-    .contato {
-      text-align: center;
-      background-color: #111;
-      color: white;
-      padding: 20px;
+    .botao:hover {
+      background-color: #085a18;
     }
 
-    #lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
+    @media (max-width: 768px) {
+      .produto {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-<h1>Produtos C.A. CELL</h1>
+  <div class="produtos">
+    <div class="produto">
+      <img src="IMG_9282.png">
+      <h3>POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998</h3>
+      <p>R$150,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998" target="_blank">Comprar</a>
+    </div>
 
-<div class="produtos">
-  <!-- Produto 1 -->
-  <div class="produto">
-    <img src="IMG_9282.png" onclick="abrirLightbox(this.src)">
-    <h3>POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998</h3>
-    <p>R$150,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9283.png">
+      <h3>POWER BANK 10.000MAH (KAIDI) KD-951</h3>
+      <p>R$95,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH (KAIDI) KD-951" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 2 -->
-  <div class="produto">
-    <img src="IMG_9283.png" onclick="abrirLightbox(this.src)">
-    <h3>POWER BANK 10.000MAH (KAIDI) KD-951</h3>
-    <p>R$95,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH (KAIDI) KD-951" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9285.png">
+      <h3>CARREGADOR TURBO USB / PD30W CABO IOS IPHONE (BYZ) C7028</h3>
+      <p>R$80,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO USB / PD30W IOS (BYZ) C7028" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 3 -->
-  <div class="produto">
-    <img src="IMG_9285.png" onclick="abrirLightbox(this.src)">
-    <h3>CARREGADOR TURBO USB / PD30W CABO IOS IPHONE (BYZ) C7028</h3>
-    <p>R$80,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO USB / PD30W IOS (BYZ) C7028" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9287.png">
+      <h3>CARREGADOR TURBO USB 100W / PD30W CABO TYPE-C (BYZ) C7029</h3>
+      <p>R$80,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO USB 100W TYPE-C (BYZ) C7029" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 4 -->
-  <div class="produto">
-    <img src="IMG_9287.png" onclick="abrirLightbox(this.src)">
-    <h3>CARREGADOR TURBO USB 100W / PD30W CABO TYPE-C (BYZ) C7029</h3>
-    <p>R$80,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO USB 100W TYPE-C (BYZ) C7029" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9289.png">
+      <h3>GAME STICK RETRO SERIES X2 PLUS 64GB 20 MIL JOGOS</h3>
+      <p>R$220,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no GAME STICK RETRO SERIES X2 PLUS 64GB" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 5 -->
-  <div class="produto">
-    <img src="IMG_9289.png" onclick="abrirLightbox(this.src)">
-    <h3>GAME STICK RETRO SERIES X2 PLUS 64GB 20 MIL JOGOS</h3>
-    <p>R$220,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no GAME STICK RETRO SERIES X2 PLUS 64GB" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9291.png">
+      <h3>LIVRO DE COLORIR STITCH CAPA DURA (50 PÁGINAS)</h3>
+      <p>R$35,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR STITCH" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 6 -->
-  <div class="produto">
-    <img src="IMG_9291.png" onclick="abrirLightbox(this.src)">
-    <h3>LIVRO DE COLORIR STITCH CAPA DURA (50 PÁGINAS)</h3>
-    <p>R$35,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR STITCH" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9293.png">
+      <h3>LIVRO DE COLORIR HERÓIS</h3>
+      <p>R$35,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HERÓIS" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 7 -->
-  <div class="produto">
-    <img src="IMG_9293.png" onclick="abrirLightbox(this.src)">
-    <h3>LIVRO DE COLORIR HERÓIS</h3>
-    <p>R$35,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HERÓIS" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9295.png">
+      <h3>LIVRO DE COLORIR HELLO KITTY</h3>
+      <p>R$35,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HELLO KITTY" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 8 -->
-  <div class="produto">
-    <img src="IMG_9295.png" onclick="abrirLightbox(this.src)">
-    <h3>LIVRO DE COLORIR HELLO KITTY</h3>
-    <p>R$35,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HELLO KITTY" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9297.png">
+      <h3>LIVRO DE COLORIR BOBBIE</h3>
+      <p>R$35,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR BOBBIE" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 9 -->
-  <div class="produto">
-    <img src="IMG_9297.png" onclick="abrirLightbox(this.src)">
-    <h3>LIVRO DE COLORIR BOBBIE</h3>
-    <p>R$35,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR BOBBIE" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9299.png">
+      <h3>POWER BANK TURBO 50.000MAH 22.5W (AGOLD) BTE-61A</h3>
+      <p>R$250,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK TURBO 50.000MAH AGOLD BTE-61A" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 10 -->
-  <div class="produto">
-    <img src="IMG_9299.png" onclick="abrirLightbox(this.src)">
-    <h3>POWER BANK TURBO 50.000MAH 22.5W (AGOLD) BTE-61A</h3>
-    <p>R$250,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK TURBO 50.000MAH AGOLD BTE-61A" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9301.png">
+      <h3>CABO TURBO TYPE-C / TYPE-C 1 METRO (KDPAN) SJ-1650CC</h3>
+      <p>R$25,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO TYPE-C / TYPE-C SJ-1650CC" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 11 -->
-  <div class="produto">
-    <img src="IMG_9301.png" onclick="abrirLightbox(this.src)">
-    <h3>CABO TURBO TYPE-C / TYPE-C 1 METRO (KDPAN) SJ-1650CC</h3>
-    <p>R$25,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO TYPE-C / TYPE-C SJ-1650CC" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9303.png">
+      <h3>CABO USB DADOS 30W 5A TYPE-C 3 METROS (KAIDI) KD-330C</h3>
+      <p>R$40,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO USB TYPE-C 3M KAIDI KD-330C" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 12 -->
-  <div class="produto">
-    <img src="IMG_9303.png" onclick="abrirLightbox(this.src)">
-    <h3>CABO USB DADOS 30W 5A TYPE-C 3 METROS (KAIDI) KD-330C</h3>
-    <p>R$40,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO USB TYPE-C 3M KAIDI KD-330C" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9305.png">
+      <h3>CABO USB DADOS KAIDI IPHONE 1 METRO KD-39A</h3>
+      <p>R$25,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO IPHONE KAIDI KD-39A" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 13 -->
-  <div class="produto">
-    <img src="IMG_9305.png" onclick="abrirLightbox(this.src)">
-    <h3>CABO USB DADOS KAIDI IPHONE 1 METRO KD-39A</h3>
-    <p>R$25,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO IPHONE KAIDI KD-39A" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9307.png">
+      <h3>CABO USB DADOS KAIDI V8 1 METRO KD-39S</h3>
+      <p>R$25,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO V8 KAIDI KD-39S" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 14 -->
-  <div class="produto">
-    <img src="IMG_9307.png" onclick="abrirLightbox(this.src)">
-    <h3>CABO USB DADOS KAIDI V8 1 METRO KD-39S</h3>
-    <p>R$25,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO V8 KAIDI KD-39S" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9309.png">
+      <h3>FONE BLUETOOTH KAIDI PROVA D'ÁGUA KNC-5602</h3>
+      <p>R$90,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE BLUETOOTH KAIDI KNC-5602" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 15 -->
-  <div class="produto">
-    <img src="IMG_9309.png" onclick="abrirLightbox(this.src)">
-    <h3>FONE BLUETOOTH KAIDI PROVA D'ÁGUA KNC-5602</h3>
-    <p>R$90,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE BLUETOOTH KAIDI KNC-5602" target="_blank">Comprar</a>
-  </div>
+    <div class="produto">
+      <img src="IMG_9311.png">
+      <h3>FONE BLUETOOTH PROVA D'ÁGUA (KAIDI) KD-5603</h3>
+      <p>R$90,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE BLUETOOTH KAIDI KD-5603" target="_blank">Comprar</a>
+    </div>
 
-  <!-- Produto 16 -->
-  <div class="produto">
-    <img src="IMG_9311.png" onclick="abrirLightbox(this.src)">
-    <h3>FONE BLUETOOTH PROVA D'ÁGUA (KAIDI) KD-5603</h3>
-    <p>R$90,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE BLUETOOTH KAIDI KD-5603" target="_blank">Comprar</a>
-  </div>
-
-  <!-- Produto 17 -->
-  <div class="produto">
-    <img src="IMG_9313.png" onclick="abrirLightbox(this.src)">
-    <h3>G SPEAKER CAIXA DE SOM BLUETOOTH COM LED RGB WIRELESS RELÓGIO BT-3401</h3>
-    <p>R$110,00</p>
-    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse na G SPEAKER CAIXA DE SOM BLUETOOTH BT-3401" target="_blank">Comprar</a>
+    <div class="produto">
+      <img src="IMG_9313.png">
+      <h3>G SPEAKER CAIXA DE SOM BLUETOOTH COM LED RGB WIRELESS RELÓGIO BT-3401</h3>
+      <p>R$110,00</p>
+      <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse na G SPEAKER CAIXA DE SOM BLUETOOTH BT-3401" target="_blank">Comprar</a>
+    </div>
   </div>
 </div>
+  
+  <!-- Rodapé -->
+  <footer>
+    <p>WhatsApp: (11) 98614-0179<br>
+    Instagram: <a href="https://instagram.com/c_a_cell" target="_blank">@c_a_cell</a><br>
+    Endereço: Rua Manoel Borba, 55A, Santo Amaro</p>
+  </footer>
 
-<!-- Lightbox -->
-<div id="lightbox" onclick="fecharLightbox()">
-  <img id="lightbox-img" src="">
-</div>
-
-<script>
-  function abrirLightbox(imagem) {
-    document.getElementById("lightbox-img").src = imagem;
-    document.getElementById("lightbox").style.display = "flex";
-  }
-
-  function fecharLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-</script>
-
-<!-- Rodapé com emojis -->
-<div class="contato">
-  <p>📱 WhatsApp: (11) 98614-0179</p>
-  <p>📸 Instagram: <a href="https://instagram.com/c_a_cell" style="color:#00aced;" target="_blank">@c_a_cell</a></p>
-  <p>📍 Endereço: Rua Manoel Borba, 55A, Santo Amaro</p>
-</div>
-
-</body>
+  <!-- Botão flutuante WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/5511986140179?text=Olá! Vim pelo site da C.A. CELL" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </a>
+</body>  
 </html>
