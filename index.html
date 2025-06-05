@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #fff;
+      background-color: #fff;
       margin: 0;
       padding: 0;
       color: #333;
@@ -20,107 +20,93 @@
     }
 
     header img {
-      max-height: 120px;
+      max-height: 80px;
     }
 
     h1 {
-      margin-top: 0;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 26px;
     }
 
-    .products {
+    .produtos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
-      background-color: #f9f9f9;
-    }
-
-    .product {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      width: 45%;
-      max-width: 300px;
-      text-align: center;
       padding: 20px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      gap: 20px;
     }
 
-    .product img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: contain;
-      margin-bottom: 15px;
+    .produto {
+      width: 45%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    .product h3 {
+    .produto img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .produto h3 {
       margin: 10px 0 5px;
       font-size: 16px;
     }
 
-    .product p {
+    .produto p {
+      color: green;
       font-weight: bold;
-      color: #0b8f1d;
-      margin-bottom: 10px;
-    }
-
-    .product a {
-      background: #25d366;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
+      font-size: 15px;
     }
 
     footer {
       background-color: #000;
       color: #fff;
-      padding: 30px 20px;
       text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
     }
 
-    footer p {
-      margin: 10px 0;
+    footer a {
+      color: #00e676;
+      text-decoration: none;
+      margin: 0 10px;
     }
 
-    .whatsapp-float {
+    .whatsapp-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #25d366;
       color: white;
-      padding: 12px 15px;
-      border-radius: 50px;
-      font-size: 16px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
       z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .whatsapp-float img {
-      width: 24px;
-      height: 24px;
-    }
-
-    @media (max-width: 768px) {
-      .product {
-        width: 100%;
-      }
+      text-decoration: none;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-  <img src="IMG_8774.jpeg" alt="Logo C-A CELL">
-</header>
+  <!-- Cabeçalho com logo -->
+  <header>
+    <img src="" alt="Logo C-A CELL" />
+  </header>
 
-<section class="products">
+  <h1>Produtos em Destaque</h1>
+
+  <section class="produtos">
+    
   <div class="produtos">
       <img src="IMG_9282.png">
       <h3>POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998</h3>
@@ -239,20 +225,22 @@
       <p>R$110,00</p>
       <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse na G SPEAKER CAIXA DE SOM BLUETOOTH BT-3401" target="_blank">Comprar</a>
     </div>
-  </div>
+  </section>
 
+  <!-- Rodapé -->
   <footer>
-  <p><strong>Endereço:</strong> Rua Manoel Borba, 55A, Santo Amaro</p>
-  <p><strong>WhatsApp:</strong> (11) 98614-0179</p>
-  <p><strong>Instagram:</strong> <a href="https://instagram.com/c_a_cell" style="color:#25d366;" target="_blank">@c_a_cell</a></p>
-</footer>
+    <p>📍 Rua Manoel Borba, 55A - Santo Amaro</p>
+    <p>
+      📞 <a href="https://wa.me/5511986140179" target="_blank">(11) 98614-0179</a> |
+      📷 <a href="https://instagram.com/c_a_cell" target="_blank">@c_a_cell</a>
+    </p>
+    <p>&copy; 2025 C-A CELL. Todos os direitos reservados.</p>
+  </footer>
 
-<a class="whatsapp-float" href="https://wa.me/5511986140179" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
-  Fale Conosco
-</a>
+  <!-- Botão WhatsApp flutuante -->
+  <a class="whatsapp-btn" href="https://wa.me/5511986140179" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
-  
-  
