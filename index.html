@@ -11,10 +11,11 @@
       padding: 0;
     }
 
-    header {
+    h1 {
       background-color: #111;
       color: white;
-      padding: 20px;
+      padding: 20px 0;
+      margin: 0;
       text-align: center;
     }
 
@@ -44,6 +45,7 @@
       height: 200px;
       object-fit: cover;
       border-radius: 10px 10px 0 0;
+      cursor: zoom-in;
     }
 
     .produto h3 {
@@ -55,136 +57,210 @@
       font-size: 18px;
       font-weight: bold;
       color: #27ae60;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
-    footer {
+    .botao {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #27ae60;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .contato {
+      text-align: center;
       background-color: #111;
       color: white;
-      text-align: center;
       padding: 20px;
     }
 
-    footer a {
-      color: #00e676;
-      text-decoration: none;
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>C.A. CELL</h1>
-    <p>Produtos e acessórios com qualidade!</p>
-  </header>
 
-  <div class="produtos">
-    <div class="produto">
-      <img src="IMG_9282.png" alt="Produto 1">
-      <h3>POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998</h3>
-      <p>R$150,00</p>
-    </div>
+<h1>Produtos C.A. CELL</h1>
 
-    <div class="produto">
-      <img src="IMG_9283.png" alt="Produto 2">
-      <h3>POWER BANK 10.000MAH (KAIDI) KD-951</h3>
-      <p>R$95,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9285.png" alt="Produto 3">
-      <h3>CARREGADOR TURBO USB / PD30W CABO IOS IPHONE (BYZ) C7028</h3>
-      <p>R$80,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9287.png" alt="Produto 4">
-      <h3>CARREGADOR TURBO USB 100W / PD30W CABO TYPE-C (BYZ) C7029</h3>
-      <p>R$80,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9289.png" alt="Produto 5">
-      <h3>GAME STICK RETRO SERIES X2 PLUS 64GB 20 MIL JOGOS</h3>
-      <p>R$220,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9291.png" alt="Produto 6">
-      <h3>LIVRO DE COLORIR STITCH CAPA DURA (50 PÁGINAS)</h3>
-      <p>R$35,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9293.png" alt="Produto 7">
-      <h3>LIVRO DE COLORIR HERÓIS</h3>
-      <p>R$35,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9295.png" alt="Produto 8">
-      <h3>LIVRO DE COLORIR HELLO KITTY</h3>
-      <p>R$35,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9297.png" alt="Produto 9">
-      <h3>LIVRO DE COLORIR BOBBIE</h3>
-      <p>R$35,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9299.png" alt="Produto 10">
-      <h3>POWER BANK TURBO 50.000MAH 22.5W (AGOLD) BTE-61A</h3>
-      <p>R$250,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9301.png" alt="Produto 11">
-      <h3>CABO TURBO TYPE-C / TYPE-C 1 METRO (KDPAN) SJ-1650CC</h3>
-      <p>R$25,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9303.png" alt="Produto 12">
-      <h3>CABO USB DADOS 30W 5A TYPE-C 3 METROS (KAIDI) KD-330C</h3>
-      <p>R$40,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9305.png" alt="Produto 13">
-      <h3>CABO USB DADOS KAIDI IPHONE 1 METRO KD-39A</h3>
-      <p>R$25,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9307.png" alt="Produto 14">
-      <h3>CABO USB DADOS KAIDI V8 1 METRO KD-39S</h3>
-      <p>R$25,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9309.png" alt="Produto 15">
-      <h3>FONE BLUETOOTH KAIDI PROVA D'ÁGUA KNC-5602</h3>
-      <p>R$90,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9311.png" alt="Produto 16">
-      <h3>FONE BLUETOOTH PROVA D'ÁGUA (KAIDI) KD-5603</h3>
-      <p>R$90,00</p>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9313.png" alt="Produto 17">
-      <h3>G SPEAKER CAIXA DE SOM BLUETOOTH COM LED RGB CARREGADOR WIRELESS E RELÓGIO DIGITAL BT-3401</h3>
-      <p>R$110,00</p>
-    </div>
+<div class="produtos">
+  <!-- Produto 1 -->
+  <div class="produto">
+    <img src="IMG_9282.png" onclick="abrirLightbox(this.src)">
+    <h3>POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998</h3>
+    <p>R$150,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998" target="_blank">Comprar</a>
   </div>
 
-  <footer>
-    <p>📍 Rua Manoel Borba, 55A – Santo Amaro</p>
-    <p>📞 <a href="https://wa.me/5511986140179" target="_blank">(11) 98614-0179 (WhatsApp)</a></p>
-    <p>📷 Instagram: <a href="https://instagram.com/c_a_cell" target="_blank">@c_a_cell</a></p>
-  </footer>
+  <!-- Produto 2 -->
+  <div class="produto">
+    <img src="IMG_9283.png" onclick="abrirLightbox(this.src)">
+    <h3>POWER BANK 10.000MAH (KAIDI) KD-951</h3>
+    <p>R$95,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH (KAIDI) KD-951" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 3 -->
+  <div class="produto">
+    <img src="IMG_9285.png" onclick="abrirLightbox(this.src)">
+    <h3>CARREGADOR TURBO USB / PD30W CABO IOS IPHONE (BYZ) C7028</h3>
+    <p>R$80,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO USB / PD30W IOS (BYZ) C7028" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 4 -->
+  <div class="produto">
+    <img src="IMG_9287.png" onclick="abrirLightbox(this.src)">
+    <h3>CARREGADOR TURBO USB 100W / PD30W CABO TYPE-C (BYZ) C7029</h3>
+    <p>R$80,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO USB 100W TYPE-C (BYZ) C7029" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 5 -->
+  <div class="produto">
+    <img src="IMG_9289.png" onclick="abrirLightbox(this.src)">
+    <h3>GAME STICK RETRO SERIES X2 PLUS 64GB 20 MIL JOGOS</h3>
+    <p>R$220,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no GAME STICK RETRO SERIES X2 PLUS 64GB" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 6 -->
+  <div class="produto">
+    <img src="IMG_9291.png" onclick="abrirLightbox(this.src)">
+    <h3>LIVRO DE COLORIR STITCH CAPA DURA (50 PÁGINAS)</h3>
+    <p>R$35,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR STITCH" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 7 -->
+  <div class="produto">
+    <img src="IMG_9293.png" onclick="abrirLightbox(this.src)">
+    <h3>LIVRO DE COLORIR HERÓIS</h3>
+    <p>R$35,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HERÓIS" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 8 -->
+  <div class="produto">
+    <img src="IMG_9295.png" onclick="abrirLightbox(this.src)">
+    <h3>LIVRO DE COLORIR HELLO KITTY</h3>
+    <p>R$35,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HELLO KITTY" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 9 -->
+  <div class="produto">
+    <img src="IMG_9297.png" onclick="abrirLightbox(this.src)">
+    <h3>LIVRO DE COLORIR BOBBIE</h3>
+    <p>R$35,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR BOBBIE" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 10 -->
+  <div class="produto">
+    <img src="IMG_9299.png" onclick="abrirLightbox(this.src)">
+    <h3>POWER BANK TURBO 50.000MAH 22.5W (AGOLD) BTE-61A</h3>
+    <p>R$250,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK TURBO 50.000MAH AGOLD BTE-61A" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 11 -->
+  <div class="produto">
+    <img src="IMG_9301.png" onclick="abrirLightbox(this.src)">
+    <h3>CABO TURBO TYPE-C / TYPE-C 1 METRO (KDPAN) SJ-1650CC</h3>
+    <p>R$25,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO TYPE-C / TYPE-C SJ-1650CC" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 12 -->
+  <div class="produto">
+    <img src="IMG_9303.png" onclick="abrirLightbox(this.src)">
+    <h3>CABO USB DADOS 30W 5A TYPE-C 3 METROS (KAIDI) KD-330C</h3>
+    <p>R$40,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO USB TYPE-C 3M KAIDI KD-330C" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 13 -->
+  <div class="produto">
+    <img src="IMG_9305.png" onclick="abrirLightbox(this.src)">
+    <h3>CABO USB DADOS KAIDI IPHONE 1 METRO KD-39A</h3>
+    <p>R$25,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO IPHONE KAIDI KD-39A" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 14 -->
+  <div class="produto">
+    <img src="IMG_9307.png" onclick="abrirLightbox(this.src)">
+    <h3>CABO USB DADOS KAIDI V8 1 METRO KD-39S</h3>
+    <p>R$25,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO V8 KAIDI KD-39S" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 15 -->
+  <div class="produto">
+    <img src="IMG_9309.png" onclick="abrirLightbox(this.src)">
+    <h3>FONE BLUETOOTH KAIDI PROVA D'ÁGUA KNC-5602</h3>
+    <p>R$90,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE BLUETOOTH KAIDI KNC-5602" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 16 -->
+  <div class="produto">
+    <img src="IMG_9311.png" onclick="abrirLightbox(this.src)">
+    <h3>FONE BLUETOOTH PROVA D'ÁGUA (KAIDI) KD-5603</h3>
+    <p>R$90,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE BLUETOOTH KAIDI KD-5603" target="_blank">Comprar</a>
+  </div>
+
+  <!-- Produto 17 -->
+  <div class="produto">
+    <img src="IMG_9313.png" onclick="abrirLightbox(this.src)">
+    <h3>G SPEAKER CAIXA DE SOM BLUETOOTH COM LED RGB WIRELESS RELÓGIO BT-3401</h3>
+    <p>R$110,00</p>
+    <a class="botao" href="https://wa.me/5511986140179?text=Olá! Tenho interesse na G SPEAKER CAIXA DE SOM BLUETOOTH BT-3401" target="_blank">Comprar</a>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="fecharLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+  function abrirLightbox(imagem) {
+    document.getElementById("lightbox-img").src = imagem;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function fecharLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
+<!-- Rodapé com emojis -->
+<div class="contato">
+  <p>📱 WhatsApp: (11) 98614-0179</p>
+  <p>📸 Instagram: <a href="https://instagram.com/c_a_cell" style="color:#00aced;" target="_blank">@c_a_cell</a></p>
+  <p>📍 Endereço: Rua Manoel Borba, 55A, Santo Amaro</p>
+</div>
+
 </body>
 </html>
