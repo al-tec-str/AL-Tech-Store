@@ -1,120 +1,170 @@
-<div class="produtos">
-  <!-- Produto 1 -->
-  <div class="produto">
-    <img src="8FAE0709-CA9A-4BD3-90FE-9B0FDF24DFFD.png" alt="POWER BANK 10.000MAH COM INDUÇÃO">
-    <h3>POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998</h3>
-    <p>R$150,00</p>
-  </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>C.A. CELL</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- Produto 2 -->
-  <div class="produto">
-    <img src="AF42AE4A-1EDC-44FE-9578-C61BFA8735B6.jpeg" alt="POWER BANK 10.000MAH">
-    <h3>POWER BANK 10.000MAH (KAIDI) KD-951</h3>
-    <p>R$95,00</p>
-  </div>
+    h1 {
+      background-color: #111;
+      color: white;
+      padding: 20px 0;
+      margin: 0;
+      text-align: center;
+    }
 
-  <!-- Produto 3 -->
-  <div class="produto">
-    <img src="9A7C69C0-D4FA-4B94-8822-7ABB36715FEF.jpeg" alt="CARREGADOR TURBO USB IOS BYZ C7028">
-    <h3>CARREGADOR TURBO USB / PD30W CABO IOS IPHONE (BYZ) C7028</h3>
-    <p>R$80,00</p>
-  </div>
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
 
-  <!-- Produto 4 -->
-  <div class="produto">
-    <img src="6D3E2034-403A-42D9-BF35-0026B32F4D66.jpeg" alt="CARREGADOR TURBO USB TYPE-C BYZ C7029">
-    <h3>CARREGADOR TURBO USB 100W / PD30W CABO TYPE-C (BYZ) C7029</h3>
-    <p>R$80,00</p>
-  </div>
+    .produto {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
 
-  <!-- Produto 5 -->
-  <div class="produto">
-    <img src="BBD15DC6-E1C9-4F7F-8333-2AA1E8F86E22.jpeg" alt="GAME STICK RETRO X2 PLUS">
-    <h3>GAME STICK RETRO SERIES X2 PLUS 64GB 20 MIL JOGOS</h3>
-    <p>R$220,00</p>
-  </div>
+    .produto:hover {
+      transform: scale(1.03);
+    }
 
-  <!-- Produto 6 -->
-  <div class="produto">
-    <img src="4C61FD7B-FC15-4F89-BB60-2D34985E1AE8.jpeg" alt="LIVRO COLORIR STITCH">
-    <h3>LIVRO DE COLORIR STITCH CAPA DURA (50 PÁGINAS)</h3>
-    <p>R$35,00</p>
-  </div>
+    .produto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
 
-  <!-- Produto 7 -->
-  <div class="produto">
-    <img src="5C8E62A2-33BD-4EDE-BD34-12208A6B64A3.jpeg" alt="LIVRO COLORIR HERÓIS">
-    <h3>LIVRO DE COLORIR HERÓIS</h3>
-    <p>R$35,00</p>
-  </div>
+    .produto h3 {
+      font-size: 15px;
+      margin: 10px;
+    }
 
-  <!-- Produto 8 -->
-  <div class="produto">
-    <img src="85DA5D3F-2274-44EC-9508-1B1B2F2A361B.jpeg" alt="LIVRO COLORIR HELLO KITTY">
-    <h3>LIVRO DE COLORIR HELLO KITTY</h3>
-    <p>R$35,00</p>
-  </div>
+    .produto p {
+      font-size: 18px;
+      font-weight: bold;
+      color: #27ae60;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Produtos C.A. CELL</h1>
 
-  <!-- Produto 9 -->
-  <div class="produto">
-    <img src="0B7FA992-6016-4B08-9874-F99BD05F6906.jpeg" alt="LIVRO COLORIR BOBBIE">
-    <h3>LIVRO DE COLORIR BOBBIE</h3>
-    <p>R$35,00</p>
-  </div>
+  <div class="produtos">
+    <div class="produto">
+      <img src="8FAE0709-CA9A-4BD3-90FE-9B0FDF24DFFD.png" alt="Produto 1">
+      <h3>POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998</h3>
+      <p>R$150,00</p>
+    </div>
 
-  <!-- Produto 10 -->
-  <div class="produto">
-    <img src="AC604FD8-28B0-49FC-9236-E76AC8522A27.jpeg" alt="POWER BANK 50000MAH">
-    <h3>POWER BANK TURBO 50.000MAH 22.5W (AGOLD) BTE-61A</h3>
-    <p>R$250,00</p>
-  </div>
+    <div class="produto">
+      <img src="AF42AE4A-1EDC-44FE-9578-C61BFA8735B6.jpeg" alt="Produto 2">
+      <h3>POWER BANK 10.000MAH (KAIDI) KD-951</h3>
+      <p>R$95,00</p>
+    </div>
 
-  <!-- Produto 11 -->
-  <div class="produto">
-    <img src="8A931A87-628F-4FAF-9E42-2177F48E2541.jpeg" alt="CABO TYPE-C / TYPE-C 1 METRO">
-    <h3>CABO TURBO TYPE-C / TYPE-C 1 METRO (KDPAN) SJ-1650CC</h3>
-    <p>R$25,00</p>
-  </div>
+    <div class="produto">
+      <img src="9A7C69C0-D4FA-4B94-8822-7ABB36715FEF.jpeg" alt="Produto 3">
+      <h3>CARREGADOR TURBO USB / PD30W CABO IOS IPHONE (BYZ) C7028</h3>
+      <p>R$80,00</p>
+    </div>
 
-  <!-- Produto 12 -->
-  <div class="produto">
-    <img src="89B2E5AC-2FA2-4FAE-9D62-B095EDFBD4E1.jpeg" alt="CABO TYPE-C 3 METROS">
-    <h3>CABO USB DADOS 30W 5A TYPE-C 3 METROS (KAIDI) KD-330C</h3>
-    <p>R$40,00</p>
-  </div>
+    <div class="produto">
+      <img src="6D3E2034-403A-42D9-BF35-0026B32F4D66.jpeg" alt="Produto 4">
+      <h3>CARREGADOR TURBO USB 100W / PD30W CABO TYPE-C (BYZ) C7029</h3>
+      <p>R$80,00</p>
+    </div>
 
-  <!-- Produto 13 -->
-  <div class="produto">
-    <img src="A6DC2DC6-157C-44AD-B32B-3D2AA1F36A5E.jpeg" alt="CABO IPHONE KAIDI 1 METRO">
-    <h3>CABO USB DADOS KAIDI IPHONE 1 METRO KD-39A</h3>
-    <p>R$25,00</p>
-  </div>
+    <div class="produto">
+      <img src="BBD15DC6-E1C9-4F7F-8333-2AA1E8F86E22.jpeg" alt="Produto 5">
+      <h3>GAME STICK RETRO SERIES X2 PLUS 64GB 20 MIL JOGOS</h3>
+      <p>R$220,00</p>
+    </div>
 
-  <!-- Produto 14 -->
-  <div class="produto">
-    <img src="E560A1F6-C0F2-45B0-A46A-82938E98090D.jpeg" alt="CABO V8 KAIDI 1 METRO">
-    <h3>CABO USB DADOS KAIDI V8 1 METRO KD-39S</h3>
-    <p>R$25,00</p>
-  </div>
+    <div class="produto">
+      <img src="4C61FD7B-FC15-4F89-BB60-2D34985E1AE8.jpeg" alt="Produto 6">
+      <h3>LIVRO DE COLORIR STITCH CAPA DURA (50 PÁGINAS)</h3>
+      <p>R$35,00</p>
+    </div>
 
-  <!-- Produto 15 -->
-  <div class="produto">
-    <img src="4DB92267-B6E1-4123-9219-C2869173314B.jpeg" alt="FONE BLUETOOTH KNC-5602">
-    <h3>FONE BLUETOOTH KAIDI PROVA D'ÁGUA KNC-5602</h3>
-    <p>R$90,00</p>
-  </div>
+    <div class="produto">
+      <img src="5C8E62A2-33BD-4EDE-BD34-12208A6B64A3.jpeg" alt="Produto 7">
+      <h3>LIVRO DE COLORIR HERÓIS</h3>
+      <p>R$35,00</p>
+    </div>
 
-  <!-- Produto 16 -->
-  <div class="produto">
-    <img src="943C9141-E168-43E9-9E62-FF2A25AC7385.jpeg" alt="FONE BLUETOOTH KD-5603">
-    <h3>FONE BLUETOOTH PROVA D'ÁGUA (KAIDI) KD-5603</h3>
-    <p>R$90,00</p>
-  </div>
+    <div class="produto">
+      <img src="85DA5D3F-2274-44EC-9508-1B1B2F2A361B.jpeg" alt="Produto 8">
+      <h3>LIVRO DE COLORIR HELLO KITTY</h3>
+      <p>R$35,00</p>
+    </div>
 
-  <!-- Produto 17 -->
-  <div class="produto">
-    <img src="522FFF2C-41D6-4C59-A951-CB44FE69964E.jpeg" alt="CAIXA DE SOM BT-3401">
-    <h3>G SPEAKER CAIXA DE SOM BLUETOOTH COM LED RGB CARREGADOR WIRELESS E RELÓGIO DIGITAL BT-3401</h3>
-    <p>R$110,00</p>
+    <div class="produto">
+      <img src="0B7FA992-6016-4B08-9874-F99BD05F6906.jpeg" alt="Produto 9">
+      <h3>LIVRO DE COLORIR BOBBIE</h3>
+      <p>R$35,00</p>
+    </div>
+
+    <div class="produto">
+      <img src="AC604FD8-28B0-49FC-9236-E76AC8522A27.jpeg" alt="Produto 10">
+      <h3>POWER BANK TURBO 50.000MAH 22.5W (AGOLD) BTE-61A</h3>
+      <p>R$250,00</p>
+    </div>
+
+    <div class="produto">
+      <img src="8A931A87-628F-4FAF-9E42-2177F48E2541.jpeg" alt="Produto 11">
+      <h3>CABO TURBO TYPE-C / TYPE-C 1 METRO (KDPAN) SJ-1650CC</h3>
+      <p>R$25,00</p>
+    </div>
+
+    <div class="produto">
+      <img src="89B2E5AC-2FA2-4FAE-9D62-B095EDFBD4E1.jpeg" alt="Produto 12">
+      <h3>CABO USB DADOS 30W 5A TYPE-C 3 METROS (KAIDI) KD-330C</h3>
+      <p>R$40,00</p>
+    </div>
+
+    <div class="produto">
+      <img src="A6DC2DC6-157C-44AD-B32B-3D2AA1F36A5E.jpeg" alt="Produto 13">
+      <h3>CABO USB DADOS KAIDI IPHONE 1 METRO KD-39A</h3>
+      <p>R$25,00</p>
+    </div>
+
+    <div class="produto">
+      <img src="E560A1F6-C0F2-45B0-A46A-82938E98090D.jpeg" alt="Produto 14">
+      <h3>CABO USB DADOS KAIDI V8 1 METRO KD-39S</h3>
+      <p>R$25,00</p>
+    </div>
+
+    <div class="produto">
+      <img src="4DB92267-B6E1-4123-9219-C2869173314B.jpeg" alt="Produto 15">
+      <h3>FONE BLUETOOTH KAIDI PROVA D'ÁGUA KNC-5602</h3>
+      <p>R$90,00</p>
+    </div>
+
+    <div class="produto">
+      <img src="943C9141-E168-43E9-9E62-FF2A25AC7385.jpeg" alt="Produto 16">
+      <h3>FONE BLUETOOTH PROVA D'ÁGUA (KAIDI) KD-5603</h3>
+      <p>R$90,00</p>
+    </div>
+
+    <div class="produto">
+      <img src="522FFF2C-41D6-4C59-A951-CB44FE69964E.jpeg" alt="Produto 17">
+      <h3>G SPEAKER CAIXA DE SOM BLUETOOTH COM LED RGB CARREGADOR WIRELESS E RELÓGIO DIGITAL BT-3401</h3>
+      <p>R$110,00</p>
+    </div>
   </div>
-</div>
+</body>
+</html>
