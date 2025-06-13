@@ -1,234 +1,262 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AL TECH STORE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AL Tech Store</title> 
   <style>
+    /* Reset básico */
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
     }
-
     body {
+      font-family: Arial, sans-serif;
       background: #fff;
-      color: #111;
+      color: #222;
+      line-height: 1.4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-
     header {
-      padding: 20px;
+      padding: 15px 20px;
       text-align: center;
-      background: #f8f8f8;
       border-bottom: 1px solid #ddd;
+      background: #f9f9f9;
     }
-
     header img {
-      max-width: 180px;
+      max-width: 250px;
       height: auto;
+      object-fit: contain;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
+    main {
+      flex-grow: 1;
+      padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .produtos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 20px;
     }
-
-    .product {
-      background: #fafafa;
+    .produto {
       border: 1px solid #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: 0.3s;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-    }
-
-    .product img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .info {
+      border-radius: 6px;
       padding: 15px;
       text-align: center;
+      background: #fff;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.07);
+      transition: box-shadow 0.3s ease;
     }
-
-    .info h3 {
-      font-size: 1.1rem;
+    .produto:hover {
+      box-shadow: 0 4px 14px rgb(0 0 0 / 0.15);
+    }
+    .produto img {
+      max-width: 100%;
+      height: 160px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .produto h3 {
+      font-size: 1rem;
       margin-bottom: 8px;
+      min-height: 50px; /* para manter altura uniforme */
     }
-
-    .info p {
+    .produto p {
       font-weight: bold;
-      color: #222;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #007BFF;
     }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #f2f2f2;
-      border-top: 1px solid #ddd;
-      margin-top: 50px;
-      font-size: 0.95rem;
-    }
-
-    footer a {
-      color: #111;
+    .produto a {
+      display: inline-block;
+      padding: 8px 14px;
+      background: #007BFF;
+      color: #fff;
       text-decoration: none;
-      font-weight: 500;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
     }
-
+    .produto a:hover {
+      background: #0056b3;
+    }
+    footer {
+      background: #f9f9f9;
+      padding: 15px 20px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      font-size: 1rem;
+      color: #333;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+    footer a {
+      color: #007BFF;
+      text-decoration: none;
+    }
     footer a:hover {
       text-decoration: underline;
+    }
+    /* Responsivo - diminuir texto no celular */
+    @media (max-width: 480px) {
+      .produto img {
+        height: 140px;
+      }
+      .produto h3 {
+        font-size: 0.9rem;
+        min-height: auto;
+      }
+      .produto p, footer {
+        font-size: 0.9rem;
+      }
+      .produto a {
+        font-size: 0.85rem;
+        padding: 7px 12px;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="84FC9C54-C28A-4A0A-8E70-06DC3DBA3380.jpeg" alt="Logo AL Tech Store" />
+    <!-- Substitua 'logo.png' pelo caminho da sua logo -->
+    <img src="logo.png" alt="Logo AL Tech store" />
   </header>
 
-  <main class="container">
+  <main>
+    <div class="produtos">
+      <!-- PRODUTOS COMEÇAM AQUI -->
+      <div class="produto">
+        <img src="IMG_9282.jpeg" alt="Power Bank KD-998" />
+        <h3>POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998</h3>
+        <p>R$150,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
 
-  <div class="produtos">
-    <!-- PRODUTOS COMEÇAM AQUI -->
-    <div class="produto">
-      <img src="IMG_9282.jpeg" alt="Power Bank KD-998">
-      <h3>POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998</h3>
-      <p>R$150,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH COM INDUÇÃO 22.5W (KAIDI) KD-998" target="_blank">Comprar</a>
+      <div class="produto">
+        <img src="IMG_9283.jpeg" alt="Power Bank KD-951" />
+        <h3>POWER BANK 10.000MAH (KAIDI) KD-951</h3>
+        <p>R$95,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH (KAIDI) KD-951" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9285.jpeg" alt="Carregador iPhone BYZ" />
+        <h3>CARREGADOR TURBO USB / PD30W CABO IOS IPHONE (BYZ) C7028</h3>
+        <p>R$80,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO IOS IPHONE BYZ C7028" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9287.jpeg" alt="Carregador Type-C BYZ" />
+        <h3>CARREGADOR TURBO USB 100W / PD30W CABO TYPE-C (BYZ) C7029</h3>
+        <p>R$80,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO TYPE-C BYZ C7029" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9289.jpeg" alt="Game Stick" />
+        <h3>GAME STICK RETRO SERIES X2 PLUS 64GB 20 MIL JOGOS</h3>
+        <p>R$220,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no GAME STICK RETRO SERIES X2 PLUS" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9291.jpeg" alt="Livro Stitch" />
+        <h3>LIVRO DE COLORIR STITCH CAPA DURA (50 PÁGINAS)</h3>
+        <p>R$35,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR STITCH" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9293.jpeg" alt="Livro Heróis" />
+        <h3>LIVRO DE COLORIR HERÓIS</h3>
+        <p>R$35,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HERÓIS" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9295.jpeg" alt="Livro Hello Kitty" />
+        <h3>LIVRO DE COLORIR HELLO KITTY</h3>
+        <p>R$35,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HELLO KITTY" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9297.jpeg" alt="Livro Bobbie" />
+        <h3>LIVRO DE COLORIR BOBBIE</h3>
+        <p>R$35,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR BOBBIE" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9299.jpeg" alt="Power Bank Agold" />
+        <h3>POWER BANK TURBO 50.000MAH 22.5W (AGOLD) BTE-61A</h3>
+        <p>R$250,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 50.000MAH AGOLD BTE-61A" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9301.jpeg" alt="Cabo SJ-1650CC" />
+        <h3>CABO TURBO TYPE-C / TYPE-C 1 METRO (KDPAN) SJ-1650CC</h3>
+        <p>R$25,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO TYPE-C SJ-1650CC" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9303.jpeg" alt="Cabo KD-330C" />
+        <h3>CABO USB DADOS 30W 5A TYPE-C 3 METROS (KAIDI) KD-330C</h3>
+        <p>R$40,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO USB TYPE-C KD-330C" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9305.jpeg" alt="Cabo KD-39A" />
+        <h3>CABO USB DADOS KAIDI IPHONE 1 METRO KD-39A</h3>
+        <p>R$25,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO IPHONE KAIDI KD-39A" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9307.jpeg" alt="Cabo KD-39S" />
+        <h3>CABO USB DADOS KAIDI V8 1 METRO KD-39S</h3>
+        <p>R$25,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO V8 KAIDI KD-39S" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9309.jpeg" alt="Fone KNC-5602" />
+        <h3>FONE BLUETOOTH KAIDI PROVA D'ÁGUA KNC-5602</h3>
+        <p>R$90,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE KAIDI KNC-5602" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9311.jpeg" alt="Fone KD-5603" />
+        <h3>FONE BLUETOOTH PROVA D'ÁGUA (KAIDI) KD-5603</h3>
+        <p>R$90,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE KAIDI KD-5603" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+
+      <div class="produto">
+        <img src="IMG_9313.jpeg" alt="Caixa de Som BT-3401" />
+        <h3>G SPEAKER CAIXA DE SOM BLUETOOTH COM LED RGB WIRELESS RELÓGIO BT-3401</h3>
+        <p>R$110,00</p>
+        <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse na G SPEAKER CAIXA DE SOM BT-3401" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      <!-- PRODUTOS TERMINAM AQUI -->
     </div>
-
-    <div class="produto">
-      <img src="IMG_9283.jpeg" alt="Power Bank KD-951">
-      <h3>POWER BANK 10.000MAH (KAIDI) KD-951</h3>
-      <p>R$95,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 10.000MAH (KAIDI) KD-951" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9285.jpeg" alt="Carregador iPhone BYZ">
-      <h3>CARREGADOR TURBO USB / PD30W CABO IOS IPHONE (BYZ) C7028</h3>
-      <p>R$80,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO IOS IPHONE BYZ C7028" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9287.jpeg" alt="Carregador Type-C BYZ">
-      <h3>CARREGADOR TURBO USB 100W / PD30W CABO TYPE-C (BYZ) C7029</h3>
-      <p>R$80,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CARREGADOR TURBO TYPE-C BYZ C7029" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9289.jpeg" alt="Game Stick">
-      <h3>GAME STICK RETRO SERIES X2 PLUS 64GB 20 MIL JOGOS</h3>
-      <p>R$220,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no GAME STICK RETRO SERIES X2 PLUS" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9291.jpeg" alt="Livro Stitch">
-      <h3>LIVRO DE COLORIR STITCH CAPA DURA (50 PÁGINAS)</h3>
-      <p>R$35,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR STITCH" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9293.jpeg" alt="Livro Heróis">
-      <h3>LIVRO DE COLORIR HERÓIS</h3>
-      <p>R$35,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HERÓIS" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9295.jpeg" alt="Livro Hello Kitty">
-      <h3>LIVRO DE COLORIR HELLO KITTY</h3>
-      <p>R$35,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR HELLO KITTY" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9297.jpeg" alt="Livro Bobbie">
-      <h3>LIVRO DE COLORIR BOBBIE</h3>
-      <p>R$35,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no LIVRO DE COLORIR BOBBIE" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9299.jpeg" alt="Power Bank Agold">
-      <h3>POWER BANK TURBO 50.000MAH 22.5W (AGOLD) BTE-61A</h3>
-      <p>R$250,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no POWER BANK 50.000MAH AGOLD BTE-61A" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9301.jpeg" alt="Cabo SJ-1650CC">
-      <h3>CABO TURBO TYPE-C / TYPE-C 1 METRO (KDPAN) SJ-1650CC</h3>
-      <p>R$25,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO TYPE-C SJ-1650CC" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9303.jpeg" alt="Cabo KD-330C">
-      <h3>CABO USB DADOS 30W 5A TYPE-C 3 METROS (KAIDI) KD-330C</h3>
-      <p>R$40,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO USB TYPE-C KD-330C" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9305.jpeg" alt="Cabo KD-39A">
-      <h3>CABO USB DADOS KAIDI IPHONE 1 METRO KD-39A</h3>
-      <p>R$25,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO IPHONE KAIDI KD-39A" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9307.jpeg" alt="Cabo KD-39S">
-      <h3>CABO USB DADOS KAIDI V8 1 METRO KD-39S</h3>
-      <p>R$25,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no CABO V8 KAIDI KD-39S" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9309.jpeg" alt="Fone KNC-5602">
-      <h3>FONE BLUETOOTH KAIDI PROVA D'ÁGUA KNC-5602</h3>
-      <p>R$90,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE KAIDI KNC-5602" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9311.jpeg" alt="Fone KD-5603">
-      <h3>FONE BLUETOOTH PROVA D'ÁGUA (KAIDI) KD-5603</h3>
-      <p>R$90,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse no FONE KAIDI KD-5603" target="_blank">Comprar</a>
-    </div>
-
-    <div class="produto">
-      <img src="IMG_9313.jpeg" alt="Caixa de Som BT-3401">
-      <h3>G SPEAKER CAIXA DE SOM BLUETOOTH COM LED RGB WIRELESS RELÓGIO BT-3401</h3>
-      <p>R$110,00</p>
-      <a href="https://wa.me/5511986140179?text=Olá! Tenho interesse na G SPEAKER CAIXA DE SOM BT-3401" target="_blank">Comprar</a>
-    </div>
-    <!-- PRODUTOS TERMINAM AQUI -->
-  </div>
-
   </main>
 
   <footer>
-    <p>WhatsApp: (11) 98614-0179 | Instagram: <a href="https://instagram.com/al_techstore" target="_blank">@al_techstore</a></p>
-    <p>Endereço: Rua Manoel Borba, 55A, Santo Amaro</p>
+    <p>📞 WhatsApp: <a href="https://wa.me/5511986140179" target="_blank" rel="noopener noreferrer">(11) 98614-0179</a></p>
+    <p>📸 Instagram: <a href="https://instagram.com/al_techstore" target="_blank" rel="noopener noreferrer">@al_techstore</a></p>
+    <p>📍 Endereço: Rua Manoel Borba, 55A, Santo Amaro</p>
   </footer>
-
 </body>
 </html>
